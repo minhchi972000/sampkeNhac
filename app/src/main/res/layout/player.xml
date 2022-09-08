@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#496C8F">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/backgroundPlayer"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/noo"
+        app:civ_border_color="@color/color_white"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintStart_toEndOf="@id/backgroundPlayer"
+        android:padding="@dimen/_5sdp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Tên bài hát"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_16ssp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewListComment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/ibtnPlay"
+            app:layout_constraintBottom_toTopOf="@id/includeSwipeBottom"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:padding="@dimen/_20sdp"
+            tools:itemCount="5"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/player_item_list_comment" />
+
+    <ImageView
+        android:id="@+id/ibtnPlay"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/imgHinh"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/play_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgHinh" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgHinh"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_below="@+id/textViewTitle"
+        app:civ_border_color="@color/color_white"
+        app:civ_border_width="2dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/noo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+         />
+
+    <include
+        android:id="@+id/includeSwipeBottom"
+        layout="@layout/bottom_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewListComment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

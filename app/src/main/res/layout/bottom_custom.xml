@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionSwipe"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:layout_margin="@dimen/_10sdp"
+    app:layoutDescription="@xml/bottom_custom_scene">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textmessage"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_edit_message"
+        android:hint="Your message"
+        android:textColorHint="@color/white"
+        app:boxStrokeWidth="0dp"
+        app:endIconDrawable="@drawable/ic_send"
+        app:endIconMode="custom"
+        app:endIconTint="@color/color_white"
+        app:hintTextColor="@color/color_white"
+        app:layout_constraintEnd_toStartOf="@id/imageStar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="#00000000"
+            android:padding="0dp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_12sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/imageStar"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_corner_18"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_star"
+        app:layout_constraintEnd_toStartOf="@+id/clone_container"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/clone_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/heart_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_corner_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_action_fav" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

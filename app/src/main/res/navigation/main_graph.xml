@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/homeGreenFragment">
+
+    <fragment
+        android:id="@+id/playerFragment"
+        tools:layout="@layout/player"
+        android:name="wee.digital.sample.ui.fragment.player.PlayerFragment"
+        android:label="PlayerFragment" />
+    <action
+        android:id="@+id/action_global_playerFragment"
+        app:destination="@id/playerFragment" />
+    <fragment
+        android:id="@+id/homeGreenFragment"
+        tools:layout="@layout/home"
+        android:name="wee.digital.sample.ui.fragment.home.HomeFragment"
+        android:label="HomeGreenFragment" />
+    <action
+        android:id="@+id/action_global_homeGreenFragment"
+        app:destination="@id/homeGreenFragment" />
+
+
+</navigation>

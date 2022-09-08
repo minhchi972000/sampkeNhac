@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#123"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Nhac offline"
+        app:titleTextColor="@color/color_white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/home_item_horizontal" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_artist"
+        tools:itemCount="4"
+        tools:listitem="@layout/home_item_vertical" />
+
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewList" />
+
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottom_navigation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_margin="@dimen/_5sdp"-->
+    <!--        android:background="@drawable/bg_corner_18"-->
+    <!--        android:elevation="16dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:itemIconTint="@color/custom_color_bottom_navigation"-->
+    <!--        app:itemTextColor="@color/custom_color_bottom_navigation"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/recyclerView"-->
+    <!--        app:menu="@menu/bottom_menu" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

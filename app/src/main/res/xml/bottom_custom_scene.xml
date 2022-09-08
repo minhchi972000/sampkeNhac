@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@id/imageStar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/textmessage"
+            android:layout_marginTop="100dp" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/clone_container"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/imageStar"
+            android:layout_marginTop="100dp"
+            android:rotation="-360" />
+        <Constraint
+            android:id="@+id/clone_container"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintVertical_bias="0.7"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:rotation="-360"
+            android:layout_marginTop="100dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>

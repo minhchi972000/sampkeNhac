@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wee.digital.widget.base.DialogLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutContent"
+    style="@style/MatchParent">
+
+    <wee.digital.widget.base.AppConstraintLayout
+        android:id="@+id/layoutBottom"
+        style="@style/Dialog.BottomLayout"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/backButtonBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            style="@style/Dialog.Title"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dialog title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/viewClose"
+            style="@style/Dialog.CloseButton"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/viewSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/colorLight"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    </wee.digital.widget.base.AppConstraintLayout>
+
+</wee.digital.widget.base.DialogLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_10ssp"
+    android:layout_marginLeft="@dimen/_10ssp"
+    android:elevation="8dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_10sdp"
+        android:background="#123"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewPhoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/noo"
+            app:civ_border_color="@color/color_white"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/titleSong"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:textColor="@color/color_white"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:text="Chia đôi lối về" />-->
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Noo Phước Thịnh" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

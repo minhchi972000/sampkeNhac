@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewPhoto"
+            android:layout_width="@dimen/_46sdp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/noo"
+            app:civ_border_color="@color/color_white"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Noo Phước Thịnh" />
+
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/color_white"
+            app:layout_constraintStart_toEndOf="@id/imageViewPhoto"
+            app:layout_constraintTop_toBottomOf="@id/title_name"
+            tools:text="Noo Phước Thịnh" />
+
+        <TextView
+            android:id="@+id/playerTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="12:00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
